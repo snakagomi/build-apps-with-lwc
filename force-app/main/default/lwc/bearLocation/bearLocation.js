@@ -16,7 +16,7 @@ export default class BearLocation extends LightningElement {
   name;
   mapMarkers = [];
 
-  @wire(getRecord, {recordId: '$recordId', field: bearFields})
+  @wire(getRecord, {recordId: '$recordId', fields: bearFields})
   loadBear({error, data}){
     if(error){
       // TODO:handle error
